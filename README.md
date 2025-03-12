@@ -1,5 +1,11 @@
 # AI-Prompt-Engineer PromptManiac
 
+<img width="1440" alt="Screenshot 2025-03-11 at 11 20 21 PM" src="https://github.com/user-attachments/assets/05f26a5d-c652-406d-8b21-8ebead7d6142" />
+
+<img width="1440" alt="Screenshot 2025-03-11 at 11 20 31 PM" src="https://github.com/user-attachments/assets/c64f805e-7f22-4953-9f1c-65e582bb6807" />
+
+
+
 🚀 Advanced Prompt Engineering System
 An innovative AI-powered application leveraging advanced prompt engineering techniques (Adaptive Thinking, Chain-of-Thought, Tree-of-Thought) to generate deeply structured and sensational prompts tailored for different domains and styles.
 
