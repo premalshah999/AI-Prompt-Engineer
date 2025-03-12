@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptManiac | Advanced Prompt Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fa-solid fa-brain"></i>
+                    <h1>PromptManiac</h1>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Transform Your <span class="highlight">AI Prompts</span> Into Powerful Instructions</h1>
+                    <p>Our advanced prompt engineering system optimizes your prompts for specific domains and styles, enhancing AI responses for your unique needs.</p>
+                    <button class="cta-button" id="try-now-btn">Try It Now</button>
+                </div>
+                <div class="hero-image">
+                    <img src="Fa-Team-Fontawesome-FontAwesome-Brain.512.png" alt="AI Prompt Engineering">
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="section-container">
+                    <h2>Powerful <span class="highlight">Features</span></h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </div>
+                            <h3>Domain Specialization</h3>
+                            <p>Optimize prompts for specific domains including Research, Marketing, Legal, Healthcare, and more.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-pen-fancy"></i>
+                            </div>
+                            <h3>Style Adaptation</h3>
+                            <p>Tailor your prompts to different styles like Innovation, Analysis, Coding, or Brainstorming.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h3>DeepSeek Integration</h3>
+                            <p>Powered by advanced AI models to deliver high-quality, contextually relevant responses.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3>Performance Analytics</h3>
+                            <p>Track response times and effectiveness of your enhanced prompts over time.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="prompt-generator" id="prompt-generator">
+                <div class="section-container">
+                    <h2>Enhance Your <span class="highlight">Prompts</span></h2>
+                    <div class="generator-container">
+                        <form id="prompt-form">
+                            <div class="form-group">
+                                <label for="prompt-input">Your Prompt</label>
+                                <textarea id="prompt-input" placeholder="Enter your prompt here (max 1000 characters)..." required></textarea>
+                                <div class="character-count"><span id="char-count">0</span>/1000</div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="domain-select">Domain</label>
+                                    <div class="select-wrapper">
+                                        <select id="domain-select" required>
+                                            <option value="" disabled selected>Select domain</option>
+                                            <option value="Research">Research</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Legal">Legal</option>
+                                            <option value="Healthcare">Healthcare</option>
+                                            <option value="Education">Education</option>
+                                            <option value="Finance">Finance</option>
+                                            <option value="Software">Software</option>
+                                            <option value="CustomerService">Customer Service</option>
+                                        </select>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="style-select">Style</label>
+                                    <div class="select-wrapper">
+                                        <select id="style-select" required>
+                                            <option value="" disabled selected>Select style</option>
+                                            <option value="Innovation">Innovation</option>
+                                            <option value="Research">Research</option>
+                                            <option value="Implementation">Implementation</option>
+                                            <option value="Coding">Coding</option>
+                                            <option value="Analysis">Analysis</option>
+                                            <option value="Debugging">Debugging</option>
+                                            <option value="Reasoning">Reasoning</option>
+                                            <option value="Brainstorming">Brainstorming</option>
+                                        </select>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="response-length">Response Length:</label>
+                                <div class="radio-toggle">
+                                    <input type="radio" id="short-response" name="response-length" value="Short" checked>
+                                    <label for="short-response">Short</label>
+                            
+                                    <input type="radio" id="detailed-response" name="response-length" value="Detailed">
+                                    <label for="detailed-response">Detailed</label>
+                            
+                                    <div class="slider"></div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">
+                                <span>Enhance Prompt</span>
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </button>
+                        </form>
+                        
+                        <div class="result-container">
+                            <div class="result-header">
+                                <h3>Enhanced Prompt</h3>
+                                <button id="copy-result" class="icon-button" title="Copy to clipboard">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                            
+                            <div id="loading-indicator" class="loading-indicator hidden">
+                                <div class="spinner"></div>
+                                <p>Enhancing your prompt...</p>
+                            </div>
+                            
+                            <div id="result-content" class="result-content">
+                                <p class="placeholder">Your enhanced prompt will appear here...</p>
+                            </div>
+                            
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Response Time:</span>
+                                    <span id="response-time" class="metric-value">-</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Timestamp:</span>
+                                    <span id="timestamp" class="metric-value">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="how-it-works">
+                <div class="section-container">
+                    <h2>How It <span class="highlight">Works</span></h2>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?q=80&w=400&auto=format&fit=crop" alt="Enter prompt">
+                            <div class="step-content">
+                                <h3>Enter Your Prompt</h3>
+                                <p>Start with your initial prompt idea that you want to enhance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop" alt="Select parameters">
+                            <div class="step-content">
+                                <h3>Select Parameters</h3>
+                                <p>Choose the domain, style, and response length that fits your needs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=400&auto=format&fit=crop" alt="AI enhancement">
+                            <div class="step-content">
+                                <h3>AI Enhancement</h3>
+                                <p>Our system optimizes your prompt using advanced AI techniques.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=400&auto=format&fit=crop" alt="Get results">
+                            <div class="step-content">
+                                <h3>Get Results</h3>
+                                <p>Receive your enhanced prompt ready to use with any AI system.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <div class="section-container">
+                    <h2>What Our <span class="highlight">Users Say</span></h2>
+                    <div class="testimonial-slider">
+                        <div class="testimonial-track">
+                            <div class="testimonial-card">
+                                <div class="quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <p>PromptManiac has revolutionized how our research team interacts with AI. We're getting much more precise and useful responses that align perfectly with our scientific inquiries.</p>
+                                </div>
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Chen">
+                                    <div>
+                                        <h4>Dr. Sarah Chen</h4>
+                                        <p>Research Director, BioTech Innovations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-card">
+                                <div class="quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <p>As a marketing professional, I need creative content that stands out. This tool helps me craft prompts that generate truly innovative ideas. The domain-specific optimization is a game-changer for our campaigns.</p>
+                                </div>
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Johnson">
+                                    <div>
+                                        <h4>Marcus Johnson</h4>
+                                        <p>Creative Director, Spark Marketing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-card">
+                                <div class="quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <p>The domain-specific optimization is a game-changer for legal documentation. It understands the nuances of legal language perfectly and helps us draft precise, unambiguous content for our clients.</p>
+                                </div>
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elena Rodriguez">
+                                    <div>
+                                        <h4>Elena Rodriguez</h4>
+                                        <p>Legal Counsel, Global Law Partners</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider-controls">
+                            <button class="prev-btn" aria-label="Previous testimonial">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <div class="slider-dots">
+                                <span class="dot active" data-index="0"></span>
+                                <span class="dot" data-index="1"></span>
+                                <span class="dot" data-index="2"></span>
+                            </div>
+                            <button class="next-btn" aria-label="Next testimonial">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>PromptManiac</h2>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#prompt-generator">Try It</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">How It Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:support@promptmaniac.ai">support@promptmaniac.ai</a></li>
+                            <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PromptManiac. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification">
+        <i class="fa-solid fa-check"></i>
+        <p>Copied to clipboard!</p>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
